@@ -1,13 +1,12 @@
-import dynamic from 'next/dynamic'
-import IframeFood from '../components/IframeFood/IframeFood'
-import "../styles/index.css" 
-// const DynamicIframeFood = dynamic(() => import('../components/IframeFood/IframeFood'), {
-//   loading: () => <Spinner />,
-// })
+import dynamic from 'next/dynamic';
+import IframeFood from '../components/iframeFood/IframeFood'; // Note the lowercase 'iframeFood'
+import "../styles/index.css";
 
-const DynamicIframeFood = dynamic(() => import('../components/IframeFood/IframeFood'))
-export default function Page() {
+const DynamicIframeFood = dynamic(() => import('../components/iframeFood/IframeFood'));
+
+export default function MyApp() {
   return (
-      <IframeFood />
-  )
+    <DynamicIframeFood />
+  );
 }
+
